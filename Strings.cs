@@ -21,11 +21,11 @@ using System.Globalization;
 public static class Strings {
 
     public static bool Matches(this string source, string compare) {
-        return String.Equals(source, compare, StringComparison.InvariantCultureIgnoreCase);
+        return String.Equals(source, compare, StringComparison.OrdinalIgnoreCase);
     }
 
     public static bool MatchesTrimmed(this string source, string compare) {
-        return String.Equals(source.Trim(), compare.Trim(), StringComparison.InvariantCultureIgnoreCase);
+        return String.Equals(source.Trim(), compare.Trim(), StringComparison.OrdinalIgnoreCase);
     }
 
     public static bool MatchesRegex(this string inputString, string matchPattern) {
@@ -151,7 +151,7 @@ public static class Strings {
     /// <param name="replacement">The replacement.</param>
     /// <returns></returns>
     public static string FastReplace(this string original, string pattern, string replacement) {
-        return FastReplace(original, pattern, replacement, StringComparison.InvariantCultureIgnoreCase);
+        return FastReplace(original, pattern, replacement, StringComparison.OrdinalIgnoreCase);
     }
 
     /// <summary>
